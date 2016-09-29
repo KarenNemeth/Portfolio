@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Karen Nemeth's Portfolio</title>
+    <style text="text/css">
+        body {
+            background-color: #1c1c1f;
+            font-family: "Montserrat";
+            color: white;
+            text-align: center;
+        }
+        #projects{
+            display: none;
+            background-color: black;
+            color: white;
+            width: 100%;
+            position: relative;
+            border: 2px solid black;
+            margin-top: 2em;
+            height: auto;
+            overflow: hidden;
+            text-align: center;
+        }
+        ul {
+            width: 100%;
+            height: 100%;
+            list-style: none;
+            position: relative;
+            display: inline-block;
+            padding: 0;
+            margin: 0;
+        }
+        #individualProject{
+            width: 300px;
+            height: 200px;
+            display: inline-flex;
+            align-items: center;
+            justify-content: space-around;
+            margin: 1em;
+            position: relative;
+        }
+        #text {
+            cursor: pointer;
+            color: white;
+            position: absolute;
+            z-index: 15;
+            font-family: "Montserrat", sans-serif;
+        }
+    </style>
+</head>
+<body>
+    <div id="header">
+        <h1>Karen Nemeth's <br> Web Development Portfolio</h1>
+        <h2>Selected Projects</h2>
+    </div>
+    <div id="projectsContainer">
+        <ul>
+            {{#each projects}}
+            <li id="individualProject">
+                <a href="{{link}}" id="text">{{name}}</a>
+            </li>
+            {{/each}}
+        </ul>
+    </div>
+</body>
+</html>
