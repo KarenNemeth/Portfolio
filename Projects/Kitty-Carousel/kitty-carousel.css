@@ -1,0 +1,77 @@
+#home {
+    width: 100%;
+    height: 600px;
+    overflow: hidden;
+    position: relative;
+}
+
+#carousel {
+    width: 200%;
+}
+
+.cat {
+  position: absolute;
+  opacity: 0; /*It was showing the previous slide to the left at the start*/
+  transform: translateX(100%);
+  }
+
+.cat img {
+    width: 100%;
+    height: 600px;
+}
+
+.cat:first-child {
+    transform: translateX(0%);
+    opacity: 1;
+}
+
+#ready {
+    transform: translateX(100%);
+    transition: transform 0;
+    opacity: 0;
+}
+
+#current {
+    transform: translateX(0%);
+    transition: transform 1s ease-in-out;
+    zIndex: 100;
+    opacity = 1;
+}
+
+#previous{
+    transform: translateX(-100%);
+    transition: transform 1s ease-in-out;
+    /* add transition end in javascript*/
+}
+
+#counter {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    z-index: 200;
+}
+
+#dots {
+    width: 100px;
+    height: 50px;
+    margin-left: auto;
+    margin-right: auto;
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    justify-content: space-between;
+}
+
+.dot {
+    height: 15px;
+    width: 11px;
+    border: 2px solid white;
+    border-radius: 100%;
+    background-color: transparent;
+}
+
+@media screen {
+
+}
